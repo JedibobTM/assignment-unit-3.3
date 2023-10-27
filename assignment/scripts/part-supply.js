@@ -6,22 +6,22 @@ console.log('****** Part Supply *******');
 // 1. Create a variable called 'partsNeeded' with a value of the number 40.
 console.log('1. Create partsNeeded:');
 let partsNeeded = 40;
-
+console.log(partsNeeded);
 // 2. Create a variable called 'supplyChanges' whose value is an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11.
 console.log('2. Create supplyChanges:');
 let supplyChanges = [3, 5, -6, 0, 7, 11]
-
+console.log(supplyChanges);
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
 console.log('3. Access the second value of supplyChanges:');
 let secondItem = supplyChanges[1];
-
+console.log(secondItem);
 // 4. The last value in the 'supplyChanges' array was added by mistake.
 //    Remove it from the array and store it inside a new variable called 'removedItem'.
 console.log('4. Remove the last value from supplyChanges:');
 let removedItem = supplyChanges.pop();
-
+console.log(removedItem);
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Add the value 25 into supplyChanges.');
 supplyChanges.push(25);
@@ -38,19 +38,22 @@ const positives = [];
 const negatives = [];
 const zeroes = [];
 
-for (let j = supplyChanges[j]; j == 5; j++){
-  console.log(supplyChanges[j]);
-  if (supplyChanges[j] > 0){
-    positives.push();
+for (let i = 0; i < supplyChanges.length; i++) {
+  console.log(supplyChanges[i]);
+  if (supplyChanges[i] > 0) {
+    positives.push(supplyChanges[i]);
+  } else if (supplyChanges[i] < 0) {
+    negatives.push(supplyChanges[i]);
+  } else if (supplyChanges[i] == 0) {
+    zeroes.push(supplyChanges[i]);
+  } else {
+    console.log ('stuff');
   }
-  if (supplyChanges[j] < 0){
-    negatives.push();
-  }
-  if (supplyChanges[j] == 0){
-    zeroes.push();
-  }
-  
 }
+console.log(positives);
+console.log(negatives);
+console.log(zeroes);
+
 
 // ***** STRETCH GOALS *********************************************
 // 7. Rewrite the 'for' loop from #6 as a 'for...of' loop. Instead of 'positives',
